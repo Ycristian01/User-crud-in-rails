@@ -1,0 +1,50 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="card" style="width:20rem; padding:10px">
+
+
+    <div class="field">
+      <%= form.label :name  %>
+      <%= form.text_field :name, class:"form-text text-muted", placeholder:"Enter name" %>
+    </div>
+
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, class:"form-control", placeholder:"Type a description"  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :facebook %>
+      <%= form.text_field :facebook, class:"form-text text-muted", placeholder:"www.facebook.com/user/"%>
+    </div>
+
+    <div class="field">
+      <%= form.label :instagram %>
+      <%= form.text_field :instagram, class:"form-text text-muted", placeholder:"www.instagram.com/user/"  %>
+    </div>
+
+    <div class="field">
+      <%= form.label :twitter %>
+      <%= form.text_field :twitter, class:"form-text text-muted", placeholder:"www.twitter.com/user/"  %>
+    </div>
+
+
+    <div class="actions">
+      <%= form.submit class:"btn btn-outline-primary"%>
+    </div>
+
+  </div>
+
+<% end %>

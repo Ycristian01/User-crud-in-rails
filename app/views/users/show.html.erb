@@ -1,0 +1,35 @@
+<div class="card" style="width:25rem; padding:10px">
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @user.description %>
+  </p>
+
+  <p>
+    <strong>Facebook:</strong>
+    <%= @user.facebook %>
+  </p>
+
+  <p>
+    <strong>Instagram:</strong>
+    <%= @user.instagram %>
+  </p>
+
+  <p>
+    <strong>Twitter:</strong>
+    <%= @user.twitter %>
+  </p>
+  
+</div>
+
+<%= link_to 'Edit', edit_user_path(@user),class:"text-dark" %> |
+<%= link_to 'Back', users_path, class:"text-dark" %>
+
+
