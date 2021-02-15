@@ -2,4 +2,6 @@
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path %>
+<div class="actions" style="margin: 1% auto">
+  <%= button_to "Back", users_path, :method => "get", class:"btn btn-outline-primary"%>
+</div>

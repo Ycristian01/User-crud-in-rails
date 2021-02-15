@@ -1,35 +1,35 @@
-<div class="card" style="width:25rem; padding:10px">
+<div class="card w75" style="width:25rem; padding:10px">
+  <div class="card-body">
+    <p id="notice"><%= notice %></p>
 
-  <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </p>
+    <h5 class="card-title"><%= @user.name %></h5>
+    <p>
+      <strong>Description:</strong>
+      <%= @user.description %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @user.description %>
-  </p>
+    <p>
+      <strong>Facebook:</strong>
+      <%= link_to @user.facebook, @user.facebook, class: "text-primary" %>
+    </p>
 
-  <p>
-    <strong>Facebook:</strong>
-    <%= @user.facebook %>
-  </p>
+    <p>
+      <strong>Instagram:</strong>
+      <%= link_to @user.instagram, @user.instagram, class: "text-primary" %>
+    </p>
 
-  <p>
-    <strong>Instagram:</strong>
-    <%= @user.instagram %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
-    <%= @user.twitter %>
-  </p>
+    <p>
+      <strong>Twitter:</strong>
+      <%= link_to @user.twitter, @user.twitter, class: "text-primary" %>
+    </p>
+  </div>
   
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user),class:"text-dark" %> |
-<%= link_to 'Back', users_path, class:"text-dark" %>
+<div class="d-flex actions" style="margin: 1% auto">
+  <%= button_to "Edit", edit_user_path(@user), :method => "get", class:"btn btn-outline-primary" %>
+  <%= button_to "Back", users_path, :method => "get", class:"btn btn-outline-primary", style:"margin: auto 15%"%>
+</div>
 
 
