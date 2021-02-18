@@ -1,15 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="d-flex justify-content-start" style="margin: auto 43%">Users</h1>
 
-<table class = "table table-bordered">
+<table class = "table table-hover">
   <thead class="thead-dark">
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
-      <th scope="col">Facebook</th>
-      <th scope="col">Instagram</th>
-      <th scope="col">Twitter</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,9 +16,6 @@
       <tr>
         <td scope="row"><%= user.name %></td>
         <td scope="row"><%= user.description %></td>
-        <td scope="row"><%=link_to user.facebook, user.facebook, class: "text-primary" %></td>
-        <td scope="row"><%= link_to user.instagram, user.instagram, class: "text-primary" %></td>
-        <td scope="row"><%= link_to user.twitter, user.twitter, class: "text-primary" %></td>
         <td><%= link_to 'Show', user, class:"text-info" %></td>
         <td><%= link_to 'Edit', edit_user_path(user), class:"text-dark" %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" %></td>
@@ -34,8 +28,10 @@
 
 <div class="actions">
   <%= button_to "New user", new_user_path, :method => "get", class:"btn btn-outline-primary" %>
-  <%# <%= link_to 'New User', new_user_path, class:"btn btn-outline-primary text-primary"%> 
 </div>
+
+
+
 
 
 

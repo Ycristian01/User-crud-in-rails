@@ -2,28 +2,26 @@
   <div class="card-body">
     <p id="notice"><%= notice %></p>
 
-
-    <h5 class="card-title"><%= @user.name %></h5>
-    <p>
-      <strong>Description:</strong>
-      <%= @user.description %>
-    </p>
-
+    
     <h2>Social networks</h2>
     <% @user.social_networks.each do |social_network| %>
       <p>
         <strong><%= social_network.name %></strong>
-        <%= link_to social_network.link, social_network.link, class: "text-primary"%>
+        <%= link_to social_network.link, social_network.link, class: "text-primary" %>
         <%= link_to 'Edit', edit_user_social_network_path(social_network,@user), class:"text-dark" %>
         <%= link_to 'Destroy',user_social_network_path(@user), method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger"%>
       </p>
     <% end %>
+
+    
+
   </div>
+
+  
   
 </div>
 
 <div class="d-flex actions" style="margin: 1% auto">
-  <%= button_to "Edit", edit_user_path(@user), :method => "get", class:"btn btn-outline-primary" %>
   <%= button_to "Back", users_path, :method => "get", class:"btn btn-outline-primary", style:"margin: auto 15%"%>
 </div>
 

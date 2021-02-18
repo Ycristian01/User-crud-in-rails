@@ -1,5 +1,5 @@
 class RemoveInstagramFromUsers < ActiveRecord::Migration[6.1]
   def change
-    remove_column :users, :Instagram, :string
+    remove_column :users, :instagram, :string
   end
 end
