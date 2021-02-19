@@ -13,23 +13,23 @@
 
 
   
-  <div class="card" style="width:20rem; padding:10px">
+  <div class="card" style="width:20rem; padding:10px; margin: 0 auto">
 
     
 
     <div class = "mb-3">
-        <%= form.select :name, options_for_select(["Facebook", "Instagram", "Twitter", "LinkedIn"]), {}, {class: "form-select"} %>
+        <%= form.select :name, options_for_select(["Facebook", "Instagram", "Twitter", "LinkedIn"]), {}, {class: "form-select form-select-sm"} %>
     </div>
 
 
     <div class="field">
       <%= form.label :link %>
-      <%= form.text_field :link, value:@social_network.link, class:"form-text text-muted", placeholder:"Enter the social network link", style:"width:300px" %>
+      <%= form.text_field :link, value:@social_network.link, placeholder:"Enter the social network link", style:"width:300px; font-size: 12px" %>
     </div>
 
 
     <div class="actions">
-      <%= form.submit class:"btn btn-outline-primary", style:"margin: 5% 15%" %>
+      <%= form.submit class:"btn btn-primary btn-sm", style:"margin: 5% 20%" %>
     </div>
 
   </div>

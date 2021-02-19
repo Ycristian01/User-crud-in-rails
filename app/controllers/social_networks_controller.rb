@@ -2,10 +2,12 @@ class SocialNetworksController < ApplicationController
     before_action :set_social_network, only: %i[ show edit update destroy ]
 
 
+
+  
     # GET /users/1 or /users/1.json
   def show
     @user =User.find(params[:user_id])
-    @social_network = SocialNetwork.find(params[:user_id])
+    @social_network = SocialNetwork.find(params[:id])
   end
 
   # GET /users/new
@@ -51,18 +53,19 @@ class SocialNetworksController < ApplicationController
 
     @user = User.find(params[:user_id])
 
-    # @social_network = @user.social_networks.find(params[:id])
-    # @social_network.destroy
-    # redirect_to user_social_network_path @user, @social_network
-
+    @social_network = @user.social_networks.find(params[:id])
     @social_network.destroy
-    respond_to do |format|
-      format.html { redirect_to user_social_networks_path @user, notice: "Network was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to user_path @user
+
+    # @social_network.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to user_social_networks_path @user, notice: "Network was successfully destroyed." }
+    #   format.json { head :no_content }
+    # end
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_social_network
       @social_network = SocialNetwork.find(params[:id])

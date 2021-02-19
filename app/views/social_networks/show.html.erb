@@ -1,15 +1,14 @@
-<div class="card w75" style="width:25rem; padding:10px">
+<div class="card w75" style="width:25rem; padding:10px; margin: 0 auto">
   <div class="card-body">
     <p id="notice"><%= notice %></p>
 
     
-    <h2>Social networks</h2>
+    <h2>Social networks:</h2>
     <% @user.social_networks.each do |social_network| %>
       <p>
-        <strong><%= social_network.name %></strong>
-        <%= link_to social_network.link, social_network.link, class: "text-primary" %>
-        <%= link_to 'Edit', edit_user_social_network_path(social_network,@user), class:"text-dark" %>
-        <%= link_to 'Destroy',user_social_network_path(@user), method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger"%>
+        <%= link_to social_network.name, social_network.link, class: "text-primary" %>
+        <%= link_to 'Edit', edit_user_social_network_path(@user,social_network), class:"text-warning" %>
+        <%= link_to 'Destroy',user_social_network_path(@user,social_network), method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger"%>
       </p>
     <% end %>
 
@@ -22,7 +21,7 @@
 </div>
 
 <div class="d-flex actions" style="margin: 1% auto">
-  <%= button_to "Back", users_path, :method => "get", class:"btn btn-outline-primary", style:"margin: auto 15%"%>
+  <%= button_to "Back", new_user_social_network_path(@user), :method => "get", class:"btn btn-success btn-sm", style:"position: absolute; left: 483px; right: 200px"%>
 </div>
 
 

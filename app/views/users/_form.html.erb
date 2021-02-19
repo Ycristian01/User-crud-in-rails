@@ -11,28 +11,29 @@
     </div>
   <% end %>
   
-  <div class="card" style="width:20rem; padding:10px">
+  <div class="card" style="width:20rem; padding:10px; margin: 0 auto">
 
 
     <div class="field">
-      <%= form.label :name  %>
-      <%= form.text_field :name, class:"form-text text-muted", placeholder:"Enter name", style:"width:300px" %>
+      <%= form.label :name%>
+      <%= form.text_field :name, placeholder:"Enter name", style:"width:300px; font-size: 12px" %>
     </div>
 
 
     <div class="field">
       <%= form.label :description %>
-      <%= form.text_area :description, class:"form-control", placeholder:"Type a description"  %>
+      <%= form.text_area :description, class:"form-control", placeholder:"Type a description", style:"font-size: 12px"  %>
     </div>
 
     <%if !@user.id.nil? %>
-      <%= link_to "Add social networks", new_user_social_network_path(@user), :method => "get", class:"btn btn-outline-primary " %>
+      <%= link_to "Add social networks", new_user_social_network_path(@user), class:"text-primary" %>
     <%end%>
 
     <div class="actions">
-      <%= form.submit class:"btn btn-outline-primary", style:"margin: 5% 25%" %>
+      <%= form.submit class:"btn btn-primary btn-sm", style:"margin: 5% 30%" %>
     </div>
 
+    
     
 
   </div>

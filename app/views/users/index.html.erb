@@ -17,7 +17,7 @@
         <td scope="row"><%= user.name %></td>
         <td scope="row"><%= user.description %></td>
         <td><%= link_to 'Show', user, class:"text-info" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), class:"text-dark" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class:"text-warning" %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" %></td>
       </tr>
     <% end %>
@@ -27,7 +27,7 @@
 <br>
 
 <div class="actions">
-  <%= button_to "New user", new_user_path, :method => "get", class:"btn btn-outline-primary" %>
+  <%= button_to "New user", new_user_path, :method => "get", class:"btn btn-primary btn-sm" %>
 </div>
 
 
