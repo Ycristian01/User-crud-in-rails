@@ -1,3 +1,9 @@
+<nav class="navbar navbar-light bg-light" style="padding:25px">
+    <%= link_to users_path, class:"text-info" do %>
+        <span class="fa fa-home" aria-hidden="true" style='font-size:40px; padding:2px; position: absolute; top: 3px; left: 50px; right: 200px'></span>
+    <% end %>
+</nav>
+
 <h1 style = "text-align: center">New User</h1>
 
 <%= render 'form', user: @user %>

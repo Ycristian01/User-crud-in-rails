@@ -1,29 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar navbar-light bg-light" style="padding:25px">
+    <%= link_to users_path, class:"text-info" do %>
+        <span class="fa fa-home" aria-hidden="true" style='font-size:40px; padding:2px; position: absolute; top: 3px; left: 50px; right: 200px'></span>
+    <% end %>
 </nav>
 
 
-
-<div class="card w75" style="width:25rem; padding:10px; margin: 0 auto">
+<div class="card w75" style="width:25rem; padding:10px; margin: 1% auto">
   <div class="card-body">
     <p id="notice"><%= notice %></p>
 
@@ -58,7 +40,7 @@
   
 </div>
 
-<div class="d-flex actions" style="margin: 1% auto; position: absolute; left: 483px; right: 200px">
+<div class="d-flex actions" style="margin: 0 auto; position: absolute; left: 483px; right: 200px">
   <%= button_to "Edit", edit_user_path(@user), :method => "get", class:"btn btn-warning btn-sm" %>
   <%= button_to "Back", users_path, :method => "get", class:"btn btn-success btn-sm", style:"margin: auto 15%"%>
   

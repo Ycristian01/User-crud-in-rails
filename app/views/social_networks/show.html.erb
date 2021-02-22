@@ -1,4 +1,11 @@
-<div class="card w75" style="width:25rem; padding:10px; margin: 0 auto">
+<nav class="navbar navbar-light bg-light" style="padding:25px">
+    <%= link_to users_path, class:"text-info" do %>
+        <span class="fa fa-home" aria-hidden="true" style='font-size:40px; padding:2px; position: absolute; top: 3px; left: 50px; right: 200px'></span>
+    <% end %>
+</nav>
+
+
+<div class="card w75" style="width:25rem; padding:10px; margin: 1% auto">
   <div class="card-body">
     <p id="notice"><%= notice %></p>
 
@@ -24,7 +31,7 @@
   
 </div>
 
-<div class="d-flex actions" style="margin: 1% auto">
+<div class="d-flex actions" style="margin: 0 auto">
   <%= button_to "Back", new_user_social_network_path(@user), :method => "get", class:"btn btn-success btn-sm", style:"position: absolute; left: 483px; right: 200px"%>
 </div>
 
