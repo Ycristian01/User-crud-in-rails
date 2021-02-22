@@ -16,9 +16,19 @@
       <tr>
         <td scope="row"><%= user.name %></td>
         <td scope="row"><%= user.description %></td>
-        <td><%= link_to 'Show', user, class:"text-info" %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), class:"text-warning" %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" %></td>
+        <td><%= link_to user, class:"text-info" do %>
+          <span class="fas fa-user-circle" aria-hidden="true" style='font-size:22px; padding:1px; margin: auto 2%'></span>
+        <% end %>
+        </td>
+
+        <td><%= link_to edit_user_path(user), class:"text-warning" do %>
+          <span class="fa fa-edit" aria-hidden="true" style='font-size:22px; padding:1px; margin: auto 2%'></span>
+        <% end %>
+        </td>
+        <td><%= link_to user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" do %>
+          <span class='fas fa-trash-alt' aria-hidden="true" style='font-size:22px'></span>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
