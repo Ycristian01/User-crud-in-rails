@@ -27,6 +27,11 @@
       <%= form.text_area :description, class:"form-control", placeholder:"Type a description", style:"font-size: 12px"  %>
     </div>
 
+    <div class="field">
+      <%= form.label "Profile photo" %>
+      <%=form.file_field :avatar%>
+    </div>
+
     <%if !@user.id.nil? %>
       <%= link_to new_user_social_network_path(@user), class:"text-primary" do %>
         <span class="fas fa-link" aria-hidden="true" style='font-size:25px; padding:1px; margin: auto 2%'></span>
