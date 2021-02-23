@@ -27,6 +27,10 @@
       <%= form.text_area :description, class:"form-control", placeholder:"Type a description", style:"font-size: 12px"  %>
     </div>
 
+    <%# <% if @user.avatar.attached? %>
+      <%# <%= image_tag @user.avatar.variant(resize: '100x100!') %>
+    <%# <% end %>
+
     <div class="field">
       <%= form.label "Profile photo" %>
       <%=form.file_field :avatar%>
