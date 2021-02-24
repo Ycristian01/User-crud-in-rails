@@ -13,7 +13,7 @@
     </div>
   <% end %>
   
-  <div class="card" style="width:20rem; padding:10px; margin: 0 auto">
+  <div class="card" style="width:25rem; padding:10px; margin: 0 auto">
 
 
     <div class="field">
@@ -31,15 +31,15 @@
       <%# <%= image_tag @user.avatar.variant(resize: '100x100!') %>
     <%# <% end %>
 
-    <div class="field">
+    <%if !@user.id.nil? %>
+      <%= link_to new_user_social_network_path(@user), class:"text-primary" do %>
+        Add<span class="fas fa-link" aria-hidden="true" style='font-size:25px; padding:1px; margin: auto 2%'></span>
+    <% end %>
+
+    <div class="field" style="padding:5px">
       <%= form.label "Profile photo" %>
       <%=form.file_field :avatar%>
     </div>
-
-    <%if !@user.id.nil? %>
-      <%= link_to new_user_social_network_path(@user), class:"text-primary" do %>
-        <span class="fas fa-link" aria-hidden="true" style='font-size:25px; padding:1px; margin: auto 2%'></span>
-      <% end %>
 
     <%end%>
 

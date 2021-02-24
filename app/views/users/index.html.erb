@@ -17,7 +17,9 @@
       <tr>
         <td scope="row">
           <% if user.avatar.attached? %>
-            <%= image_tag user.avatar.variant(resize: '100x100') %>
+            <%= link_to url_for(user.avatar), class: "text-primary" do%>
+              <%= image_tag user.avatar.variant(resize: '100x100') %>
+            <% end %>
           <% end %>
         </td>
         <td scope="row"><%= user.name %></td>
