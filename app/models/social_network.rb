@@ -1,5 +1,5 @@
 class SocialNetwork < ApplicationRecord
-    belongs_to :user
+  belongs_to :user
 
-    validates :link, presence: true
+  validates :link, presence: true
 end

@@ -15,6 +15,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+
         <td scope="row">
           <% if user.avatar.attached? %>
             <%= link_to url_for(user.avatar), class: "text-primary" do%>
@@ -22,8 +23,10 @@
             <% end %>
           <% end %>
         </td>
+
         <td scope="row"><%= user.name %></td>
         <td scope="row"><%= user.description %></td>
+
         <td><%= link_to user, class:"text-info" do %>
           <span class="fas fa-user-circle" aria-hidden="true" style='font-size:22px; padding:1px; margin: auto 2%'></span>
         <% end %>
@@ -33,15 +36,16 @@
           <span class="fa fa-edit" aria-hidden="true" style='font-size:22px; padding:1px; margin: auto 2%'></span>
         <% end %>
         </td>
+
         <td><%= link_to user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" do %>
           <span class='fas fa-trash-alt' aria-hidden="true" style='font-size:22px'></span>
         <% end %>
         </td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <div class="actions">
