@@ -12,32 +12,32 @@
     </div>
   <% end %>
   
-  <div class="card" style="width:25rem; padding:10px; margin: 0 auto">
+  <div class="card card-form">
 
     <div class="field">
-      <%= form.label :name%>
-      <%= form.text_field :name, placeholder:"Enter name", style:"width:300px; font-size: 12px" %>
+      <%= form.label :name, class:"form-label"%>
+      <%= form.text_field :name, class:"form-control field-name", placeholder:"Enter name" %>
     </div>
 
     <div class="field">
-      <%= form.label :description %>
-      <%= form.text_area :description, class:"form-control", placeholder:"Type a description", style:"font-size: 12px; height: 100px"  %>
+      <%= form.label :description, class:"form-label" %>
+      <%= form.text_area :description, class:"form-control field-descrip", placeholder:"Type a description" %>
     </div>
 
     <% if !@user.id.nil? %>
       <%= link_to new_user_social_network_path(@user), class:"text-primary" do %>
-        Add<span class="fas fa-link" aria-hidden="true" style='font-size:25px; padding:1px; margin: auto 2%'></span>
+        Add<span class="fas fa-link socialnetwork-icon" aria-hidden="true"></span>
     <% end %>
 
-    <div class="field" style="padding:5px">
+    <div class="field field-avatar">
       <%= form.label "Profile photo" %>
       <%= form.file_field :avatar%>
     </div>
 
     <% end %>
     
-    <div class="actions">
-      <%= form.submit class:"btn btn-primary btn-sm", style:"margin: 5% 34%" %>
+    <div class="actions submit-button">
+      <%= form.submit class:"btn btn-primary btn-sm" %>
     </div>
 
   </div>
