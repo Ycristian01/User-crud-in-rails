@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <div class="card" style="width:20rem; padding:10px; margin: 0 auto">
+  <div class="card card-form">
 
     <div class = "mb-3">
         <%= form.select :name, options_for_select(["Facebook", "Instagram", "Twitter", "LinkedIn"]), {}, {class: "form-select form-select-sm"} %>
@@ -20,13 +20,12 @@
 
     <div class="field">
       <%= form.label :link, class:"form-label" %>
-      <%= form.text_field :link, value:@social_network.link, class:"form-control", placeholder:"Enter the social network link", style:"width:300px; font-size: 12px" %>
+      <%= form.text_field :link, value:@social_network.link, class:"form-control field-name", placeholder:"Enter the social network link"%>
     </div>
 
     <div class="actions">
-      <%= form.submit class:"btn btn-primary btn-sm", style:"margin: 5% 20%" %>
+      <%= form.submit class:"btn btn-primary btn-sm submit-button-socialnetwork"%>
     </div>
 
   </div>
-
 <% end %>

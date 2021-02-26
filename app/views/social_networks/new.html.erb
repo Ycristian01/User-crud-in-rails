@@ -1,14 +1,12 @@
-<nav class="navbar navbar-light bg-light" style="padding:25px">
+<nav class="navbar navbar-light bg-light navbar-home">
     <%= link_to users_path, class:"text-info" do %>
-        <span class="fa fa-home" aria-hidden="true" style='font-size:40px; padding:2px; position: absolute; top: 3px; left: 50px; right: 200px'></span>
+        <span class="fa fa-home navbar-icon" aria-hidden="true"></span>
     <% end %>
 </nav>
 
-
-<h1 style = "text-align: center">New social network</h1>
-
+<h1 class="index-title">New social network</h1>
 <%= render 'form'%>
 
-<div class="actions" style="margin: 1% auto">
-  <%= button_to "Back", @user, :method => "get", class:"btn btn-success btn-sm", style:"position: absolute; left: 525px; right: 200px"%>
+<div class="actions back-form">
+  <%= button_to "Back", @user, :method => "get", class:"btn btn-success btn-sm back-new"%>
 </div>

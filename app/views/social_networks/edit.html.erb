@@ -1,16 +1,16 @@
-<nav class="navbar navbar-light bg-light" style="padding:25px">
+<nav class="navbar navbar-light bg-light navbar-home">
     <%= link_to users_path, class:"text-info" do %>
-        <span class="fa fa-home" aria-hidden="true" style='font-size:40px; padding:2px; position: absolute; top: 3px; left: 50px; right: 200px'></span>
+        <span class="fa fa-home navbar-icon" aria-hidden="true"></span>
     <% end %>
 </nav>
 
 
-<h1 style = "text-align: center">Editing Social network</h1>
+<h1 class="index-title">Editing Social network</h1>
 
 <%= render 'form'%>
 
 
-<div class="d-flex actions" style="margin: 1% auto; position: absolute; left: 522px; right: 200px">
+<div class="d-flex actions edit-back-form">
   <%= button_to "Show", user_social_network_path(@user,@social_network), :method => "get", class:"btn btn-info btn-sm" %>
-  <%= button_to "Back", @user, :method => "get", class:"btn btn-warning btn-sm", style:"margin: auto 15%"%>
+  <%= button_to "Back", @user, :method => "get", class:"btn btn-warning btn-sm back"%>
 </div>
