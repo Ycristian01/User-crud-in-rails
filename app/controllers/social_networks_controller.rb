@@ -3,7 +3,6 @@ class SocialNetworksController < ApplicationController
   before_action :set_social_network, only: %i[ show edit update destroy ]
   
   def show
-    @social_network = @user.social_networks.find(params[:id]) 
   end
 
   def new
@@ -11,7 +10,6 @@ class SocialNetworksController < ApplicationController
   end
 
   def edit
-   @social_network = @user.social_networks.find(params[:id])
   end
 
   def create
@@ -35,7 +33,6 @@ class SocialNetworksController < ApplicationController
   end
 
   def destroy
-   @social_network = @user.social_networks.find(params[:id])
    @social_network.destroy
 
    redirect_to user_path @user
