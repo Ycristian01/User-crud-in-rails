@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User::RegistrationsController < Devise::RegistrationsController
+class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
 
@@ -22,6 +22,12 @@ class User::RegistrationsController < Devise::RegistrationsController
   # PUT /resource
   def update
     super
+    # if @user.update(user_params)
+    #   redirect_to @user 
+    #   flash[:notice] = "User was successfully updated." 
+    # else
+    #   render 'edit'
+    # end
   end
 
   # DELETE /resource

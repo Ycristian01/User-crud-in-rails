@@ -7,5 +7,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   validates :name, presence: true, length: { minimum: 6, maximun: 100 }
-  #validates :description, presence: true, length: { minimum: 10, maximun: 300 }
+  validates :username, presence: true, length: { minimum: 6, maximun: 20 }
+  #validates :email, uniqueness: true
+  #validates :description, length: { minimum: 10, maximun: 300 }
 end

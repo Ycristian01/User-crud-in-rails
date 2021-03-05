@@ -25,30 +25,19 @@
         <td scope="row"><%= user.name %></td>
         <td scope="row"><%= user.description %></td>
 
-        <td><%= link_to user, class:"text-info" do %>
+        <td><%= link_to username_path(user.username), class:"text-info" do %>
           <span class="fas fa-user-circle user-icon" aria-hidden="true"></span>
         <% end %>
         </td>
-
-        <td><%= link_to edit_user_path(user), class:"text-warning" do %>
-          <span class="fa fa-edit edit-icon" aria-hidden="true"></span>
-        <% end %>
-        </td>
-
-        <td><%= link_to user, method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger" do %>
-          <span class='fas fa-trash-alt delete-icon' aria-hidden="true"></span>
-        <% end %>
-        </td>
-
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
 
-<div class="actions">
+<%# <div class="actions">
   <%= button_to "New user", new_user_registration_path, :method => "get", class:"btn btn-primary btn-sm" %>
-</div>
+<%# </div> %> 
 
 
 

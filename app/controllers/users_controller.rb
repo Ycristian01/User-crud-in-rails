@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user 
+      redirect_to @user
       flash[:notice] = "User was successfully created"      
     else
       render 'new'     
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   private
     
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find_by(username: params[:username])
     end
 
     def user_params
