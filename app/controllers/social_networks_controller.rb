@@ -35,7 +35,7 @@ class SocialNetworksController < ApplicationController
   def destroy
    @social_network.destroy
 
-   redirect_to user_path @user
+   redirect_to username_path(current_user.username)
    flash[:notice] = "Social network was successfully destroyed." 
   end
 

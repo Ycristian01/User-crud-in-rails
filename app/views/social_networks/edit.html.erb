@@ -12,5 +12,5 @@
 
 <div class="d-flex actions edit-back-form">
   <%= button_to "Show", user_social_network_path(@user,@social_network), :method => "get", class:"btn btn-info btn-sm" %>
-  <%= button_to "Back", @user, :method => "get", class:"btn btn-warning btn-sm back"%>
+  <%= button_to "Back",  username_path(current_user.username), :method => "get", class:"btn btn-warning btn-sm back"%>
 </div>

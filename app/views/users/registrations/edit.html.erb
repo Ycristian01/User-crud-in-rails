@@ -23,6 +23,11 @@
       <%= f.text_area :description, class:"form-control field-descrip", placeholder:"Enter description" %>
   </div>
 
+  <div class="field field-avatar">
+    <%= f.label "Profile photo" %>
+    <%= f.file_field :avatar%>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

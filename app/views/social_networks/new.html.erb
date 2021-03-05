@@ -8,5 +8,5 @@
 <%= render 'form'%>
 
 <div class="actions back-form">
-  <%= button_to "Back", @user, :method => "get", class:"btn btn-success btn-sm back-new"%>
+  <%= button_to "Back",  username_path(current_user.username), :method => "get", class:"btn btn-success btn-sm back-new"%>
 </div>
