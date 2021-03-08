@@ -6,16 +6,22 @@
   //padding:25px;
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
 }
 
+.username-navbar {
+  position: relative;
+  left: 25px;
+  bottom: 20px;
+}
+
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px; }
+  margin: 20px; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

@@ -19,8 +19,35 @@
   right: 200px
 }
 
+.log-out-button {
+  position: relative; 
+  left: 1130px;
+  top: 5px;
+}
+
 .submit-button {
   margin: 5% 34%;
+}
+
+.profile-navbar-button {
+  position: relative; 
+  left: 80px;
+  padding:3px;
+  top: 5px;
+}
+
+.sign-up-button {
+  position: relative; 
+  left: 80px;
+  padding:3px;
+  bottom: 1px;
+}
+
+.sign-in-button {
+  position: relative; 
+  padding:3px;
+  left: 100px;
+  bottom: 1px;
 }
   
 .submit-button-socialnetwork {

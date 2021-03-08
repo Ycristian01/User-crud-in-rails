@@ -4,6 +4,19 @@
     margin: auto 2%
 }
 
+.user-icon-navbar {
+    font-size:22px; 
+    padding:1px; 
+}
+
+.edit-icon-navbar {
+    position: relative; 
+    font-size:22px; 
+    padding:3px;
+    left: 120px;
+    top: 5px;
+}
+
 .edit-icon {
     font-size:22px; 
     padding:1px; 
@@ -24,7 +37,7 @@
     font-size:40px; 
     padding:2px; 
     position: absolute; 
-    top: 3px; 
-    left: 50px; 
+    top: 5px; 
+    left: 20px; 
     right: 200px
 }
