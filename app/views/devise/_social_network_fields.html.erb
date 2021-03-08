@@ -1,0 +1,11 @@
+<tr class="nested-fields">
+  <td>
+    <%=link_to_remove_association "remove social newtork", f, class: "btn btn-primary"%>
+  </td>
+  <td>
+     <%= f.select :name, options_for_select(["Facebook", "Instagram", "Twitter", "LinkedIn"]), {}, {class: "form-select form-select-sm"} %>
+  </td>
+  <td>
+    <%= f.text_field :link, class:"form-control field-name", placeholder:"Enter the social network link"%>
+  </td>
+</tr>

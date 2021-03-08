@@ -23,6 +23,21 @@
       <%= f.text_area :description, class:"form-control field-descrip", placeholder:"Enter description" %>
   </div>
 
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Social network name</th>
+        <th>Social network link</th>
+      </tr>
+    </thead>
+    <tbody class="social_networks">
+      <%= f.text_field :social_networks do |builder| %>
+        <%= render 'social_network_fields', f: builder %>
+      <%end%>
+    </tbody> 
+  </table>
+
   <div class="field field-avatar">
     <%= f.label "Profile photo" %>
     <%= f.file_field :avatar%>
@@ -40,7 +55,7 @@
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
-
+  
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
@@ -53,6 +68,8 @@
 
   <div class="actions">
     <%= f.submit "Update" %>
+    <%= link_to_add_association 'Add social_network', f, :social_networks, class: 'btn btn-primary', data: {
+    association_insertion_node: '.social_networks', association_insertion_method: :append} %>
   </div>
 <% end %>
 

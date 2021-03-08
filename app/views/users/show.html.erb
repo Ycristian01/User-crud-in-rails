@@ -45,12 +45,15 @@
     <% @user.social_networks.each do |social_network| %>
       <p>
         <%= link_to social_network.name, social_network.link, class: "text-primary"%>
-        <%= link_to edit_user_social_network_path(@user,social_network), class:"text-warning pull-right" do %>
-          <span class="fa fa-edit edit-icon" aria-hidden="true"></span>
-        <% end %>
 
-        <%= link_to user_social_network_path(@user,social_network), method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger pull-right" do %>
-          <span class='fas fa-trash-alt delete-icon' aria-hidden="true"></span>
+        <% if current_user==@user %>
+          <%= link_to edit_user_social_network_path(@user,social_network), class:"text-warning pull-right" do %>
+            <span class="fa fa-edit edit-icon" aria-hidden="true"></span>
+          <% end %>
+
+          <%= link_to user_social_network_path(@user,social_network), method: :delete, data: { confirm: 'Are you sure?' }, class:"text-danger pull-right" do %>
+            <span class='fas fa-trash-alt delete-icon' aria-hidden="true"></span>
+          <% end %>
         <% end %>
 
       </p>

@@ -49,5 +49,6 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :description, :avatar, :username)
+      params.permit(:name,social_networks_attributes: SocialNetwork.attribute_names.map(&:to_sym).push(destroy))
     end
 end

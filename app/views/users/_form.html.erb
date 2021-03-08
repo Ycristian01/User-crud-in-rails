@@ -29,11 +29,6 @@
         Add<span class="fas fa-link socialnetwork-icon" aria-hidden="true"></span>
     <% end %>
 
-    <%# <tbody class="social_networks">
-      <% form.text_field :social_networks do |social_network| %>
-        <%# <% render 'social_network_fields', form: social_network%>
-    <%# </tbody> %> 
-
     <div class="field field-avatar">
       <%= form.label "Profile photo" %>
       <%= form.file_field :avatar%>
@@ -43,8 +38,6 @@
     
     <div class="actions submit-button">
       <%= form.submit class:"btn btn-primary btn-sm" %>
-      <%# <% link_to_add_association 'Add social_network', form, :social_networks, class: 'btn btn-primary', data: {
-      association_insertion_node: '.social_networks', association_insertion_method: :append}%> 
     </div>
 
   </div>
